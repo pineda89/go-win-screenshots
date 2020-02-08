@@ -18,7 +18,7 @@ func main() {
 	screen_horzres = GetDeviceCaps(screen_hdc, HORZRES)
 	screen_vertres = GetDeviceCaps(screen_hdc, VERTRES)
 	screen_rectangle = image.Rect(0, 0, screen_horzres, screen_vertres)
-	
+
 	img, _ := CaptureScreen()
 	myImg := image.Image(img)
 	outputfilename := strconv.FormatInt(time.Now().UnixNano(), 10) + ".jpg"
